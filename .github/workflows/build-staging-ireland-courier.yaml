@@ -1,15 +1,13 @@
-name: Build Production Ireland RP-Courier
+name: Build Staging Ireland RP-Courier
 on:
   push:
     tags:
-      - 'v*.*.*'
-      - '!v*.*.*-staging*'
-      - '!v*.*.*-develop*'
+      - 'v*.*.*-staging*'
 jobs:
   docker:
     runs-on: ubuntu-latest
     environment: 
-      name: production-ireland
+      name: staging-ireland
     steps:
       - name: Set output
         id: vars
