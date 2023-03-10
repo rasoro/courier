@@ -832,9 +832,9 @@ type backend struct {
 }
 
 func (b *backend) GetRunEventsByMsgUUIDFromDB(ctx context.Context, msgUUID string) ([]courier.RunEvent, error) {
-	return nil, nil
+	return b.GetRunEventsByMsgUUIDFromDB(ctx, msgUUID)
 }
 
 func (b *backend) GetMessage(ctx context.Context, msdID int) (courier.Msg, error) {
-	return nil, nil
+	return b.GetMessage(ctx, msdID)
 }
